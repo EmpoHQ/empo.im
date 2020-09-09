@@ -1,0 +1,27 @@
+{
+  "name": "empo.im",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon ./index.js",
+    "start": "cross-env NODE_ENV=production node ./index.js",
+    "build": "nuxt build",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "@tailwindcss/ui": "^0.6.0",
+    "cheerio": "^1.0.0-rc.3",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "nuxt": "^2.14.4",
+    "nuxt-seo": "^1.3.1",
+    "vue-gtag": "^1.8.0",
+    "vue-moment": "^4.1.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^3.0.2",
+    "nodemon": "^2.0.4"
+  }
+}
