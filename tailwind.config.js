@@ -36,8 +36,7 @@ module.exports = {
         ]
       },
       backgroundImage: theme => ({
-        hero:
-          "url('https://images.unsplash.com/photo-1588058365548-9efe5acb8077?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')"
+        hero: "url('~assets/imgs/img_mockup_hero.png')"
       })
     }
   },

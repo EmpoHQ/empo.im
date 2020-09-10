@@ -1,8 +1,6 @@
 <template>
   <div id="default__layout">
-    <vue-container>
-      <vue-navigation-bar />
-    </vue-container>
+    <vue-navigation-bar />
 
     <div>
       <nuxt />

@@ -2,7 +2,7 @@
   <div class="flex flex-col">
     <div class="bs--bg" />
     <div
-      class="bg-hero bg-no-repeat text-center text-white"
+      class="bg-hero bg-cover bg-no-repeat text-center text-white"
       style="padding-top: 303px; padding-bottom: 262px"
     >
       <vue-container>
