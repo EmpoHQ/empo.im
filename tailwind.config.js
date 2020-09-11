@@ -9,12 +9,12 @@ module.exports = {
   important: true,
   theme: {
     extend: {
-      screens: {
-        sm: '640px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1100px'
-      },
+      // screens: {
+      //   sm: '640px',
+      //   md: '768px',
+      //   lg: '1024px',
+      //   xl: '1100px'
+      // },
       colors: {
         primary: {
           100: '#d6cde3',
@@ -36,7 +36,8 @@ module.exports = {
         ]
       },
       backgroundImage: theme => ({
-        hero: "url('~assets/imgs/img_mockup_hero.png')"
+        hero: "url('~assets/imgs/img_mockup_hero.png')",
+        'brand-story': "url('~assets/imgs/dsc_8869.png')"
       })
     }
   },

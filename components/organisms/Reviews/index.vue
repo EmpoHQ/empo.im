@@ -1,61 +1,74 @@
 <template>
   <div class="reviews">
-    <div style="padding-top: 122px">
-      <vue-section-title>REVIEWS</vue-section-title>
-    </div>
+    <vue-container>
+      <div class="reviews--title-container">
+        <vue-section-title>REVIEWS</vue-section-title>
+      </div>
 
-    <div style="padding-top: 184px; padding-bottom: 135px">
-      <!-- empoapp -->
-      <div class="grid grid-cols-3 gap-4">
-        <div v-for="empo in GetEmpoApp" :key="empo.id" class="review">
-          <vue-image :src="require('~/assets/svgs/img_review_quotes.svg')" />
-          <div class="review__body" v-html="empo.body" />
-
-          <div class="review__bottom">
-            <div class="flex items-center">
-              <div class="review__name">{{ empo.name }}</div>
+      <div>
+        <!-- empoapp -->
+        <div class="mb-6">
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div v-for="empo in GetEmpoApp" :key="empo.id" class="review">
               <vue-image
-                v-for="i in 5"
-                :key="i"
-                :src="require('~/assets/svgs/ic_review_star_full.svg')"
-                class="review__star"
+                :src="require('~/assets/svgs/img_review_quotes.svg')"
+                class="review__quote"
               />
+              <div class="review__body" v-html="empo.body" />
+
+              <div class="review__bottom">
+                <div class="md:flex md:items-center">
+                  <div class="review__name">{{ empo.name }}</div>
+                  <vue-image
+                    v-for="i in 5"
+                    :key="i"
+                    :src="require('~/assets/svgs/ic_review_star_full.svg')"
+                    class="review__star"
+                  />
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="text-center mt-4">
+            <vue-image
+              :src="require('~/assets/svgs/img_review_logo_empoapp.svg')"
+              class="review__logo"
+            />
+          </div>
+        </div>
+
+        <!-- datascanner -->
+        <div>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div v-for="ds in GetDatascanner" :key="ds.id" class="review">
+              <vue-image
+                :src="require('~/assets/svgs/img_review_quotes.svg')"
+                class="review__quote"
+              />
+              <div class="review__body" v-html="ds.body" />
+
+              <div class="review__bottom">
+                <div class="md:flex md:items-center">
+                  <div class="review__name">{{ ds.name }}</div>
+                  <vue-image
+                    v-for="i in 5"
+                    :key="i"
+                    :src="require('~/assets/svgs/ic_review_star_full.svg')"
+                    class="review__star"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-4">
+            <vue-image
+              src="https://datascanner.s3.ap-northeast-2.amazonaws.com/public/logo/text.svg"
+              class="review__logo"
+            />
           </div>
         </div>
       </div>
-      <div class="text-center" style="margin-top: 30px">
-        <vue-image
-          :src="require('~/assets/svgs/img_review_logo_empoapp.svg')"
-        />
-      </div>
-
-      <!-- datascanner -->
-      <div class="grid grid-cols-3 gap-4" style="margin-top: 90px">
-        <div v-for="ds in GetDatascanner" :key="ds.id" class="review">
-          <vue-image :src="require('~/assets/svgs/img_review_quotes.svg')" />
-          <div class="review__body" v-html="ds.body" />
-
-          <div class="review__bottom">
-            <div class="flex items-center">
-              <div class="review__name">{{ ds.name }}</div>
-              <vue-image
-                v-for="i in 5"
-                :key="i"
-                :src="require('~/assets/svgs/ic_review_star_full.svg')"
-                class="review__star"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="text-center" style="margin-top: 30px">
-        <vue-image
-          src="https://datascanner.s3.ap-northeast-2.amazonaws.com/public/logo/text.svg"
-          style="width: 153px"
-        />
-      </div>
-    </div>
+    </vue-container>
   </div>
 </template>
 
@@ -110,38 +123,122 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+.reviews {
+  padding-top: 55px;
+  padding-bottom: 200px;
+}
+@screen md {
+  .reviews {
+  }
+}
+
 .review {
   @apply bg-white;
   @apply relative;
 
-  padding: 36px;
-  height: 346px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  height: 148px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+@screen md {
+  .review {
+    padding: 36px;
+    height: 346px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.reviews--title-container {
+  margin-bottom: 27px;
+}
+@screen md {
+  .reviews--title-container {
+    /* margin-top: 55px;
+    margin-bottom: 27px; */
+  }
+}
+
+.review__quote {
+  @apply block;
+
+  width: 5px;
+  height: 5px;
+}
+@screen md {
+  .review__quote {
+    width: unset;
+  }
 }
 
 .review__body {
-  margin-top: 31px;
-  margin-bottom: 136px;
+  @apply font-light;
+
+  font-size: 8px;
+  line-height: 10px;
+  letter-spacing: -0.09px;
+
+  margin-top: 5px;
+  margin-bottom: 27px;
+}
+@screen md {
+  .review__body {
+    margin-top: 31px;
+    margin-bottom: 136px;
+  }
 }
 
 .review__bottom {
   @apply absolute;
 
-  left: 36px;
-  right: 36px;
-  bottom: 36px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
 }
+@screen md {
+  .review__bottom {
+    left: 36px;
+    right: 36px;
+    bottom: 36px;
+  }
+}
+
 .review__name {
   @apply font-semibold;
-  font-size: 22px;
-  line-height: 29px;
+
+  font-size: 8px;
+  line-height: 7.4px;
   letter-spacing: -0.24px;
   color: #050505;
-  margin-right: 28px;
 }
+@screen md {
+  .review__name {
+    font-size: 22px;
+    line-height: 29px;
+    letter-spacing: -0.24px;
+    margin-right: 28px;
+  }
+}
+
 .review__star {
   @apply inline-block;
 
+  width: 6px;
   margin-right: 6px;
+}
+@screen md {
+  .review__star {
+    margin-right: 6px;
+    width: unset;
+  }
+}
+
+.review__logo {
+  @apply inline-block;
+  width: 62px;
+}
+@screen md {
+  .review__logo {
+    /* width: 62px; */
+  }
 }
 </style>

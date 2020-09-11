@@ -26,20 +26,32 @@ export default {
 
 h2 {
   @apply text-black;
+  @apply font-bold;
 
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 12px;
+}
+@screen md {
+  h2 {
+    font-size: 30px;
+  }
 }
 
 .divider {
   @apply inline-block;
 
-  line-height: 0;
-  margin-top: 24px;
+  margin-top: 6px;
   margin-bottom: 0;
-  width: 84px;
-  height: 3px;
+  width: 42px;
+  height: 1px;
 }
+@screen md {
+  .divider {
+    margin-top: 24px;
+    height: 3px;
+    width: 84px;
+  }
+}
+
 .divider--default {
   @apply bg-black;
 }

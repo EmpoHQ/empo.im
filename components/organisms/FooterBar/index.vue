@@ -1,31 +1,39 @@
 <template>
   <footer>
-    <div style="padding-top: 58px; padding-bottom: 85.5px">
-      <ul class="space-x-10">
-        <li
-          v-for="item in NavigationItems"
-          :key="item.title"
-          class="inline-block"
-        >
-          <a :href="item.href" class="nav--item">{{ item.title }}</a>
-        </li>
-      </ul>
-      <ul
-        style="margin-top: 27.5px"
-        class="flex items-center flex-wrap space-x-10"
-      >
-        <li
-          v-for="item in InfoItems(1)"
-          :key="item.definition"
-          class="info--item"
-        >
-          <span class="info--definition">{{ item.definition }}</span>
-          <span>:</span>
-          <span>{{ item.description }}</span>
-        </li>
-      </ul>
-      <vue-copyright class="footer--copyright" />
-    </div>
+    <vue-container>
+      <div class="flex justify-around items-center">
+        <vue-image :src="require('~/assets/svgs/ic_footer_youtube.svg')" />
+        <vue-image :src="require('~/assets/svgs/ic_footer_insta.svg')" />
+        <vue-image :src="require('~/assets/svgs/ic_footer_google.svg')" />
+        <vue-image :src="require('~/assets/svgs/ic_footer_facebook.svg')" />
+        <vue-image :src="require('~/assets/svgs/ic_footer_medium.svg')" />
+      </div>
+
+      <div style="padding-top: 58px; padding-bottom: 85.5px">
+        <ul>
+          <li
+            v-for="item in NavigationItems"
+            :key="item.title"
+            class="inline-block"
+          >
+            <a :href="item.href" class="nav--item">{{ item.title }}</a>
+          </li>
+        </ul>
+
+        <ul class="footer--info">
+          <li
+            v-for="item in InfoItems(1)"
+            :key="item.definition"
+            class="footer--info-item"
+          >
+            <span class="info--definition">{{ item.definition }}</span>
+            <span>:</span>
+            <span>{{ item.description }}</span>
+          </li>
+        </ul>
+        <vue-copyright class="footer--copyright" />
+      </div>
+    </vue-container>
   </footer>
 </template>
 
@@ -110,23 +118,50 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+footer {
+  background-color: #fff;
+}
+@screen md {
+  footer {
+    background-color: #f0f0f0;
+  }
+}
+
 .nav--item {
   @apply inline-block;
   @apply uppercase;
 
   color: #3c3c3c;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 600;
+  margin-right: 14px;
+}
+@screen md {
+  .nav-item {
+    font-size: 16px;
+  }
 }
 
-.info--item {
+.footer--info {
   color: #979797;
-  font-size: 16px;
+  font-size: 10px;
   line-height: 24px;
   letter-spacing: 0;
 
-  /* margin-right: 20px; */
+  margin-top: 40px;
 }
+.footer--info-item {
+  @apply inline-block;
+
+  margin-right: 14px;
+}
+@screen md {
+  .footer--info {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
 .info--definition {
   font-weight: 600;
 }
@@ -136,9 +171,18 @@ export default {
 
 .footer--copyright {
   @apply block;
+  @apply font-semibold;
 
   color: #979797;
-  margin-top: 51px;
+  margin-top: 40px;
+  font-size: 10px;
   font-weight: 600;
+}
+@screen md {
+  .footer--copyright {
+    @apply block;
+
+    margin-top: 51px;
+  }
 }
 </style>

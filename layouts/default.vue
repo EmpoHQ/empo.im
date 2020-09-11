@@ -6,10 +6,6 @@
       <nuxt />
     </div>
 
-    <div style="background-color: #f0f0f0">
-      <vue-container>
-        <vue-footer-bar />
-      </vue-container>
-    </div>
+    <vue-footer-bar />
   </div>
 </template>

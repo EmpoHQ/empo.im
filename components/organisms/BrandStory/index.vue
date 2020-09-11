@@ -1,10 +1,7 @@
 <template>
-  <div class="flex flex-col">
+  <div>
     <div class="bs--bg" />
-    <div
-      class="bg-hero bg-cover bg-no-repeat text-center text-white"
-      style="padding-top: 303px; padding-bottom: 262px"
-    >
+    <div class="bs--content">
       <vue-container>
         <vue-image
           src="https://empoapp.s3.ap-northeast-2.amazonaws.com/public/symbol_text_logo.svg"
@@ -24,29 +21,62 @@
 <style lang="postcss" scoped>
 .bs--bg {
   background-color: #eeeeee;
-  opacity: 0.2;
-  height: 52px;
+  height: 18px;
 
-  box-shadow: inset 0 1px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 4px 0px rgba(0, 0, 0, 0.2);
+}
+@screed md {
+  .bs--bg {
+    height: 52px;
+    box-shadow: inset 0 1px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.bs--content {
+  @apply bg-brand-story bg-cover bg-no-repeat text-center text-white;
+
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+
+@screen md {
+  .bs--content {
+    padding-top: 303px;
+    padding-bottom: 262px;
+  }
 }
 
 .bs--logo {
-  @apply inline-block;
+  @apply text-center;
 
-  width: 261px;
+  /* width: 261px; */
 }
 
 .bs--title {
   @apply font-light;
 
-  margin-top: 59px;
-  font-size: 22px;
+  margin-top: 24px;
+  font-size: 12px;
+  line-height: 18px;
+}
+@screen md {
+  .bs--title {
+    margin-top: 59px;
+    font-size: 22px;
+  }
 }
 
 .bs--link {
   @apply block;
 
-  margin-top: 18px;
-  font-size: 32px;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 28px;
+}
+@screen md {
+  .bs--link {
+    margin-top: 18px;
+    font-size: 32px;
+  }
 }
 </style>

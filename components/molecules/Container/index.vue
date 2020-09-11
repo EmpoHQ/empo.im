@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto">
-    <div style="padding-left: 16px; padding-right: 16px">
+    <div style="padding-left: 20px; padding-right: 20px">
       <slot />
     </div>
   </div>
