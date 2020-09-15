@@ -2,12 +2,14 @@
   <nav class="relative">
     <vue-container>
       <div class="flex justify-between items-center">
-        <vue-logo class="nav--logo" />
+        <a href="/"><vue-logo class="nav--logo" /></a>
 
         <!-- Desktop menus -->
         <ul class="hidden md:flex align-middle space-x-24">
           <li v-for="item in NavigationItems" :key="item.title">
-            <a :href="item.href" class="nav--item">{{ item.title }}</a>
+            <a :href="item.href" :target="item.target" class="nav--item">{{
+              item.title
+            }}</a>
           </li>
         </ul>
 
@@ -54,23 +56,29 @@ export default {
       return [
         {
           title: 'values',
-          href: '/values'
+          href: '/values',
+          target: '_self'
         },
         {
           title: 'empo app',
-          href: '/empoapp'
+          href:
+            'https://play.google.com/store/apps/details?id=com.empo.android.empoapp',
+          target: '_blank'
         },
         {
           title: 'datascanner',
-          href: '/datascanner'
+          href: 'https://www.datascanner.io',
+          target: '_blank'
         },
         {
           title: 'story',
-          href: '/story'
+          href: '/story',
+          target: '_self'
         },
         {
           title: 'bi',
-          href: '/bi'
+          href: '/bi',
+          target: '_self'
         }
       ]
     }

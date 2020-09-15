@@ -11,6 +11,45 @@
     "title3": "New standard for mobile data",
     "description3": "Empo is building a culture, in which people share, save, purchase, and exchange mobile data freely in cash beyond simple consumption."
   },
+  "empoapp": {
+    "title": "A new way to share mobile data",
+    "description": "Unused data is helpless and expensive to pay. What if we could sell your unused data? It's the first step for the mobile data trade."
+  },
+  "kpi": {
+    "kpi1": {
+      "key": "Downloads",
+      "value": "153,450",
+      "unit": "",
+      "etc": ""
+    },
+    "kpi2": {
+      "key": "Total trade volume",
+      "value": "56,535,381",
+      "unit": "MB",
+      "etc": ""
+    },
+    "kpi3": {
+      "key": "Service markets",
+      "value": "India, Korea, UK, US",
+      "unit": "",
+      "etc": ""
+    },
+    "kpi4": {
+      "key": "Coverage",
+      "value": "4.4 miliion",
+      "unit": "m²",
+      "etc": "as large as 10 Vatican Cities"
+    }
+  },
+  "datascanner": {
+    "title": "Curation for more data, but at a half price",
+    "description": "Data plan is the most expensive subscription. For seamless data flow at a half price out of 2,022 data plans. Datascanner is your personal mobile store.",
+    "btn": "Go to Datascanner"
+  },
+  "datascannerPlan": {
+    "title": "datascanner has <strong>2,020</strong> data plans",
+    "description": "Data plan DB is always up to date for precise curation."
+  },
   "reviews": {
     "empoapp1": {
       "body": "I and my friends have installed this app. it easy to share data .Now the sign ups are quiet easy .for extra data for pubg update i used it and its fantastic",
