@@ -36,8 +36,8 @@ jobs:
           ECR_REPOSITORY: empo
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:empo.im .
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY:empo.im
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:empoim .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:empoim
 
       - name: AWS SSM Send Command
         uses: peterkimzz/aws-ssm-send-command@1.0.1
