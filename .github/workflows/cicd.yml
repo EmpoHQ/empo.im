@@ -1,0 +1,67 @@
+on:
+  push:
+    branches:
+      - master
+
+name: CI/CD
+
+jobs:
+  cicd:
+    name: CI & CD
+    runs-on: ubuntu-18.04
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-northeast-2
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Build, tag, and push image to Amazon ECR
+        id: build-image
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: empo
+          IMAGE_TAG: ${{ github.sha }}
+        run: |
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:empo.im .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:empo.im
+
+      - name: AWS SSM Send Command
+        uses: peterkimzz/aws-ssm-send-command@1.0.1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-northeast-2
+          instance-ids: ${{ secrets.INSTANCE_ID }}
+          comment: empo.im Production CD by Github Actions
+          working-directory: /home/ubuntu/empo.im_production
+          command: /bin/sh deploy.sh
+
+      - name: Action Succeed
+        if: success()
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_INCOMING_WEBHOOK_DEV_NOTIFICATIONS }}
+        uses: Ilshidur/action-slack@master
+        with:
+          args: "empo.im Production App CI/CD have been succeed."
+
+      - name: Action Failed
+        if: failure()
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_INCOMING_WEBHOOK_ERROR_REPORTS }}
+        uses: Ilshidur/action-slack@master
+        with:
+          args: "empo.im Production App CI/CD have been failed."
