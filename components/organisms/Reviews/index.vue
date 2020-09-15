@@ -8,8 +8,8 @@
       <div>
         <!-- empoapp -->
         <div class="mb-6">
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div v-for="empo in GetEmpoApp" :key="empo.id" class="review">
+          <div class="grid md:hidden grid-cols-2 gap-4">
+            <div v-for="empo in GetEmpoApp(2)" :key="empo.id" class="review">
               <vue-image
                 :src="require('~/assets/svgs/img_review_quotes.svg')"
                 class="review__quote"
@@ -29,7 +29,26 @@
               </div>
             </div>
           </div>
-          <div class="text-center mt-4">
+          <div class="hidden md:grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div v-for="empo in GetEmpoApp(3)" :key="empo.id" class="review">
+              <vue-image
+                :src="require('~/assets/svgs/img_review_quotes.svg')"
+                class="review__quote"
+              />
+              <div class="review__body" v-html="empo.body" />
+
+              <div class="review__bottom">
+                <div class="review__name">{{ empo.name }}</div>
+                <vue-image
+                  v-for="i in 5"
+                  :key="i"
+                  :src="require('~/assets/svgs/ic_review_star_full.svg')"
+                  class="review__star"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
             <vue-image
               :src="require('~/assets/svgs/img_review_logo_empoapp.svg')"
               class="review__logo"
@@ -38,9 +57,9 @@
         </div>
 
         <!-- datascanner -->
-        <div>
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div v-for="ds in GetDatascanner" :key="ds.id" class="review">
+        <div class="md:mt-24">
+          <div class="grid md:hidden grid-cols-2 gap-4">
+            <div v-for="ds in GetDatascanner(2)" :key="ds.id" class="review">
               <vue-image
                 :src="require('~/assets/svgs/img_review_quotes.svg')"
                 class="review__quote"
@@ -60,7 +79,26 @@
               </div>
             </div>
           </div>
-          <div class="text-center mt-4">
+          <div class="hidden md:grid grid-cols-3 gap-4">
+            <div v-for="ds in GetDatascanner(3)" :key="ds.id" class="review">
+              <vue-image
+                :src="require('~/assets/svgs/img_review_quotes.svg')"
+                class="review__quote"
+              />
+              <div class="review__body" v-html="ds.body" />
+
+              <div class="review__bottom">
+                <div class="review__name">{{ ds.name }}</div>
+                <vue-image
+                  v-for="i in 5"
+                  :key="i"
+                  :src="require('~/assets/svgs/ic_review_star_full.svg')"
+                  class="review__star"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
             <vue-image
               src="https://datascanner.s3.ap-northeast-2.amazonaws.com/public/logo/text.svg"
               class="review__logo"
@@ -74,49 +112,28 @@
 
 <script>
 export default {
-  computed: {
-    GetEmpoApp() {
-      return [
-        {
-          id: 1,
-          body: '아이디어도 좋고 활용도도 좋은 어플인거 같아요!!! 강추!!',
-          name: '이*희'
-        },
-        {
-          id: 2,
-          body:
-            '좋은 아이디어네요.<br>사용자들이 늘어, 전국이 와이파이존처럼 되면 참 좋을 듯 해요. 성공하는 날까지 응원할게요.',
-          name: ' 메*세데스'
-        },
-        {
-          id: 3,
-          body:
-            '친구랑 앱 설치하고<br>사용해봤더니 손쉽게 연결이 되네요. 좋아요.',
-          name: 's*ng hejin'
-        }
-      ]
+  methods: {
+    GetEmpoApp(num = 3) {
+      const data = [this.$t('reviews.empoapp1'), this.$t('reviews.empoapp2')]
+
+      if (num === 3) {
+        data.push(this.$t('reviews.empoapp3'))
+      }
+
+      return data
     },
-    GetDatascanner() {
-      return [
-        {
-          id: 1,
-          body:
-            '깔끔하게 잘 구성됐다고 생각합니다.  통신사 광고처럼 느껴지지는 않고, 사용에 용이했습니다.',
-          name: '김*연'
-        },
-        {
-          id: 2,
-          body:
-            '"국내에 알뜰 요금제"라는 주제에 대해 관심도가 높지 않지만, 홈페이지에서 알뜰 요금제가 필요성을 잘 알려주고  알뜰 요금제에 대한 궁금증을 해결할 수 있도록 도와줘서 좋았습니다.',
-          name: '최*영'
-        },
-        {
-          id: 3,
-          body:
-            '핀테크 회사같이 신뢰감이 엄청 드는 정보를 제공하는것 같습니다! 필요한 정보만 딱 보이게 모아 놓아 좋았습니다.',
-          name: '정*진'
-        }
+    GetDatascanner(num = 3) {
+      const data = [
+        this.$t('reviews.datascanner1'),
+        this.$t('reviews.datascanner2')
       ]
+
+      if (num === 3) {
+        data.push(this.$t('reviews.datascanner3'))
+      }
+
+      return data
+      return data
     }
   }
 }
@@ -129,6 +146,8 @@ export default {
 }
 @screen md {
   .reviews {
+    padding-top: 122px;
+    background-color: #f4f4f4;
   }
 }
 
@@ -153,8 +172,7 @@ export default {
 }
 @screen md {
   .reviews--title-container {
-    /* margin-top: 55px;
-    margin-bottom: 27px; */
+    margin-bottom: 184px;
   }
 }
 
@@ -166,13 +184,15 @@ export default {
 }
 @screen md {
   .review__quote {
-    width: unset;
+    width: 19px;
+    height: 14px;
   }
 }
 
 .review__body {
   @apply font-light;
 
+  color: #050505;
   font-size: 8px;
   line-height: 10px;
   letter-spacing: -0.09px;
@@ -182,6 +202,11 @@ export default {
 }
 @screen md {
   .review__body {
+    @apply font-medium;
+
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.2px;
     margin-top: 31px;
     margin-bottom: 136px;
   }
@@ -234,11 +259,14 @@ export default {
 
 .review__logo {
   @apply inline-block;
+
+  margin-top: 20px;
   width: 62px;
 }
 @screen md {
   .review__logo {
-    /* width: 62px; */
+    margin-top: 30px;
+    width: 141px;
   }
 }
 </style>

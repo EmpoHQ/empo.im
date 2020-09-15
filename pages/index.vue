@@ -4,13 +4,13 @@
 
     <vue-values />
 
-    <vue-empoapp />
+    <!-- <vue-empoapp />
 
     <vue-kpi />
 
     <vue-datascanner />
 
-    <vue-datascanner-plan />
+    <vue-datascanner-plan /> -->
 
     <vue-reviews />
 

@@ -9,13 +9,7 @@
           class="bi--logo"
         />
 
-        <div class="bi--desc">
-          <strong>Empo</strong>는 상점, 시장을 의미하는
-          <strong>Emporium</strong>에서 비롯되었습니다.<br /><br />
-          심볼은
-          <strong>'데이터 거래로 사람과 사람을 연결하는 플랫폼'</strong> 을
-          의미합니다.
-        </div>
+        <div class="bi--desc" v-html="$t('bi.description')"></div>
       </div>
     </vue-container>
   </div>
@@ -54,7 +48,8 @@
 @screen md {
   .bi--desc {
     margin-top: 84px;
-    font-size: 22px;
+    font-size: 24px;
+    line-height: 40px;
   }
 }
 </style>

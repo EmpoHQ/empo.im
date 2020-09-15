@@ -1,0 +1,83 @@
+{
+  "hero": {
+    "title": "데이터를 돈처럼 쓰세요.",
+    "desc": "데이터로 무엇이든 거래할 수 있는 세상을 만듭니다."
+  },
+  "values": {
+    "title1": "어디서든지",
+    "description1": "데이터는 이미 모든 곳에서 쓰이고 있습니다.<br>앰포는 당신의 데이터가 남김없이 소비될 수 있도록 돕습니다.",
+    "title2": "필수적인",
+    "description2": "앰포는 일상 속에서 당신의 일, 친구, 가족에 온전히 집중할 수 있도록 돕습니다.",
+    "title3": "데이터 소비의 새로운 기준",
+    "description3": "데이터를 현금처럼 주고 받고, 모으고, 거래할 수 있는 플랫폼을 통해 새로운 데이터 소비문화를 만들고 있습니다."
+  },
+  "reviews": {
+    "empoapp1": {
+      "body": "아이디어도 좋고 활용도도 좋은 어플인거 같아요!!! 강추!!",
+      "name": "이*희"
+    },
+    "empoapp2": {
+      "body": "좋은 아이디어네요.<br>사용자들이 늘어, 전국이 와이파이존처럼 되면 참 좋을 듯 해요. 성공하는 날까지 응원할게요.",
+      "name": " 메*세데스"
+    },
+    "empoapp3": {
+      "body": "친구랑 앱 설치하고<br>사용해봤더니 손쉽게 연결이 되네요. 좋아요.",
+      "name": "s*ng hejin"
+    },
+    "datascanner1": {
+      "body": "깔끔하게 잘 구성됐다고 생각합니다.  통신사 광고처럼 느껴지지는 않고, 사용에 용이했습니다.",
+      "name": "김*연"
+    },
+    "datascanner2": {
+      "body": "'국내에 알뜰 요금제'라는 주제에 대해 관심도가 높지 않지만, 홈페이지에서 알뜰 요금제가 필요성을 잘 알려주고  알뜰 요금제에 대한 궁금증을 해결할 수 있도록 도와줘서 좋았습니다.",
+      "name": "최*영"
+    },
+    "datascanner3": {
+      "body": "핀테크 회사같이 신뢰감이 엄청 드는 정보를 제공하는것 같습니다! 필요한 정보만 딱 보이게 모아 놓아 좋았습니다.",
+      "name": "정*진"
+    }
+  },
+  "brandStory": {
+    "title": "앰포의 브랜드 컬러는 별이 빛나는 밤하늘의 색깔입니다.",
+    "description": "앰포 브랜드 스토리 보러가기 >"
+  },
+  "bi": {
+    "description": "<strong>Empo</strong>는 상점, 시장을 의미하는 <strong>Emporium</strong>에서 비롯되었습니다.<br /><br />심볼은 <strong>'데이터 거래로 사람과 사람을 연결하는 플랫폼'</strong>을 의미합니다."
+  },
+  "footer": {
+    "about": "회사소개",
+    "recruit": "채용정보",
+    "termsOfServices": "서비스이용약관",
+    "privacyPolicy": "개인정보처리방침",
+    "termsOfLocationBasedServices": "위치기반서비스 이용약관",
+    "customerSupport": "고객센터",
+    "contact": "제휴/광고 문의",
+    "notice": "공지사항"
+  },
+  "info": [
+    {
+      "definition": "상호명",
+      "description": "앰포 주식회사"
+    },
+    {
+      "definition": "이메일(고객문의)",
+      "description": "support@empoapp.com"
+    },
+    {
+      "definition": "대표이사",
+      "description": "이재형"
+    },
+    {
+      "definition": "사업자등록번호",
+      "description": "810-88-01030"
+    },
+    {
+      "definition": "통신판매업신고번호",
+      "description": "2018-인천동구-0094"
+    },
+    {
+      "definition": "주소",
+      "description": "인천광역시 동구 인중로 389 지동 2층"
+    }
+  ]
+}

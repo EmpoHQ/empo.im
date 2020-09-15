@@ -1,17 +1,19 @@
 <template>
-  <div>
+  <div class="bs">
     <div class="bs--bg" />
     <div class="bs--content">
       <vue-container>
         <vue-image
-          src="https://empoapp.s3.ap-northeast-2.amazonaws.com/public/symbol_text_logo.svg"
+          :src="require('~/assets/svgs/img_story_symbol.svg')"
           class="bs--logo"
         />
 
         <h3 class="bs--title">
-          앰포의 브랜드 컬러는 별이 빛나는 밤하늘의 색깔입니다.
+          {{ $t('brandStory.title') }}
         </h3>
-        <n-link to="/" class="bs--link">앰포 브랜드 스토리 보러가기 ></n-link>
+        <n-link to="/" class="bs--link">{{
+          $t('brandStory.description')
+        }}</n-link>
       </vue-container>
     </div>
     <div class="bs--bg" />
@@ -19,6 +21,12 @@
 </template>
 
 <style lang="postcss" scoped>
+@screen md {
+  .bs {
+    padding-top: 400px;
+  }
+}
+
 .bs--bg {
   background-color: #eeeeee;
   height: 18px;
@@ -49,11 +57,18 @@
 .bs--logo {
   @apply text-center;
 
+  width: 41px;
+
   /* width: 261px; */
+}
+@screen md {
+  .bs--logo {
+    width: 101px;
+  }
 }
 
 .bs--title {
-  @apply font-light;
+  @apply font-normal;
 
   margin-top: 24px;
   font-size: 12px;
@@ -71,7 +86,7 @@
 
   margin-top: 10px;
   font-size: 16px;
-  line-height: 28px;
+  /* line-height: 28px; */
 }
 @screen md {
   .bs--link {

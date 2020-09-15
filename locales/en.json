@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "title": "Spend it like money.",
+    "desc": "Making the world that trades mobile data for anything"
+  },
+  "values": {
+    "title1": "Ubiquitous",
+    "description1": "Data is already being used for anything, everywhere. Empo helps you spend your mobile data seamlessly wherever you are.",
+    "title2": "Essential",
+    "description2": "Empo supports your daily life so that you can focus on your work, friends, and family with no worries.",
+    "title3": "New standard for mobile data",
+    "description3": "Empo is building a culture, in which people share, save, purchase, and exchange mobile data freely in cash beyond simple consumption."
+  },
+  "reviews": {
+    "empoapp1": {
+      "body": "I and my friends have installed this app. it easy to share data .Now the sign ups are quiet easy .for extra data for pubg update i used it and its fantastic",
+      "name": "S*lim T Viswanath"
+    },
+    "empoapp2": {
+      "body": "Good app. Better with sharing to data. With this we can earn. Because, network and time with can be counted as a valuable asset.",
+      "name": "P*rushottam Batav"
+    },
+    "empoapp3": {
+      "body": "The idea behind the app is really good.😊",
+      "name": "I*ternet Wanderer"
+    },
+    "datascanner1": {
+      "body": "Although there is not much interest in the topic of affordable rates in Korea, It was helpful to know the need for the affordable rate plan and it solved my questions about the reasonable plan.",
+      "name": "*Young Choi"
+    },
+    "datascanner2": {
+      "body": "The design is well organized. It doesn't feel like a telecom commercial. Also, it's useful.",
+      "name": "*Yeon Kim"
+    },
+    "datascanner3": {
+      "body": "Like a fin-tech company, it seems to provide tremendous confidence in information! It was good to have the necessary information what I needed.",
+      "name": "*Jin Jeong"
+    }
+  },
+  "brandStory": {
+    "title": "Night sky is the Empo's color.",
+    "description": "More about the brand story >"
+  },
+  "bi": {
+    "description": "<strong>Empo</strong> abbreviates an <strong>emporium</strong> meaning a shop or market.<br>The logo represents <strong>a platform that connects people with mobile data trade.</strong>"
+  },
+  "footer": {
+    "about": "About",
+    "recruit": "Recruit",
+    "termsOfServices": "Terms of Services",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfLocationBasedServices": "Terms of Location Based Services",
+    "customerSupport": "Customer Support",
+    "contact": "Contact",
+    "notice": "Notice"
+  },
+  "info": [
+    {
+      "definition": "",
+      "description": "Empo Inc"
+    },
+    {
+      "definition": "",
+      "description": "Email: support@empoapp.com"
+    }
+  ]
+}

@@ -28,10 +28,12 @@ h2 {
   @apply text-black;
   @apply font-bold;
 
+  line-height: 0;
   font-size: 12px;
 }
 @screen md {
   h2 {
+    line-height: unset;
     font-size: 30px;
   }
 }

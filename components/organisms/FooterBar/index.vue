@@ -1,15 +1,30 @@
 <template>
   <footer>
     <vue-container>
-      <div class="flex justify-around items-center">
-        <vue-image :src="require('~/assets/svgs/ic_footer_youtube.svg')" />
-        <vue-image :src="require('~/assets/svgs/ic_footer_insta.svg')" />
-        <vue-image :src="require('~/assets/svgs/ic_footer_google.svg')" />
-        <vue-image :src="require('~/assets/svgs/ic_footer_facebook.svg')" />
-        <vue-image :src="require('~/assets/svgs/ic_footer_medium.svg')" />
+      <div class="footer-sns">
+        <vue-image
+          :src="require('~/assets/svgs/ic_footer_youtube.svg')"
+          class="footer-sns__img"
+        />
+        <vue-image
+          :src="require('~/assets/svgs/ic_footer_insta.svg')"
+          class="footer-sns__img"
+        />
+        <vue-image
+          :src="require('~/assets/svgs/ic_footer_google.svg')"
+          class="footer-sns__img"
+        />
+        <vue-image
+          :src="require('~/assets/svgs/ic_footer_facebook.svg')"
+          class="footer-sns__img"
+        />
+        <vue-image
+          :src="require('~/assets/svgs/ic_footer_medium.svg')"
+          class="footer-sns__img"
+        />
       </div>
 
-      <div style="padding-top: 58px; padding-bottom: 85.5px">
+      <div class="footer-content">
         <ul>
           <li
             v-for="item in NavigationItems"
@@ -20,7 +35,7 @@
           </li>
         </ul>
 
-        <ul class="footer--info">
+        <ul v-if="$store.state.locales.locale === 'ko'" class="footer--info">
           <li
             v-for="item in InfoItems(1)"
             :key="item.definition"
@@ -31,6 +46,13 @@
             <span>{{ item.description }}</span>
           </li>
         </ul>
+
+        <ul v-if="$store.state.locales.locale === 'en'" class="footer--info">
+          <li v-for="item in InfoItems(1)" :key="item.definition">
+            {{ item.description }}
+          </li>
+        </ul>
+
         <vue-copyright class="footer--copyright" />
       </div>
     </vue-container>
@@ -43,35 +65,35 @@ export default {
     NavigationItems() {
       return [
         {
-          title: '회사소개',
+          title: this.$t('footer.about'),
           href: '/about'
         },
         {
-          title: '채용정보',
+          title: this.$t('footer.recruit'),
           href: '/recruit'
         },
         {
-          title: '서비스이용약관',
+          title: this.$t('footer.termsOfServices'),
           href: '/terms'
         },
         {
-          title: '개인정보처리방침',
+          title: this.$t('footer.privacyPolicy'),
           href: '/privacy'
         },
         {
-          title: '위치기반서비스 이용약관',
+          title: this.$t('footer.termsOfLocationBasedServices'),
           href: '/location_privacy'
         },
         {
-          title: '고객센터',
+          title: this.$t('footer.customerSupport'),
           href: '/contact'
         },
         {
-          title: '제휴/광고 문의',
+          title: this.$t('footer.contact'),
           href: '/sponsored'
         },
         {
-          title: '공지사항',
+          title: this.$t('footer.notice'),
           href: '/notice'
         }
       ]
@@ -81,32 +103,7 @@ export default {
     InfoItems(id) {
       switch (id) {
         case 1:
-          return [
-            {
-              definition: '상호명',
-              description: '앰포 주식회사'
-            },
-            {
-              definition: '이메일(고객문의)',
-              description: 'support@empoapp.com'
-            },
-            {
-              definition: '대표이사',
-              description: '이재형'
-            },
-            {
-              definition: '사업자등록번호',
-              description: '810-88-01030'
-            },
-            {
-              definition: '통신판매업신고번호',
-              description: '2018-인천동구-0094'
-            },
-            {
-              definition: '주소',
-              description: '인천광역시 동구 인중로 389 지동 2층'
-            }
-          ]
+          return this.$t('info')
 
         case 2:
         default:
@@ -120,16 +117,31 @@ export default {
 <style lang="postcss" scoped>
 footer {
   background-color: #fff;
+  padding-bottom: 155px;
 }
 @screen md {
   footer {
+    padding-top: 58px;
+    padding-bottom: 85.5px;
     background-color: #f0f0f0;
+  }
+}
+
+.footer-sns {
+  @apply flex justify-around items-center;
+}
+@screen md {
+  .footer-sns {
+    @apply justify-end;
+  }
+  .footer-sns__img {
+    margin-left: 18px;
   }
 }
 
 .nav--item {
   @apply inline-block;
-  @apply uppercase;
+  /* @apply uppercase; */
 
   color: #3c3c3c;
   font-size: 12px;
@@ -137,8 +149,18 @@ footer {
   margin-right: 14px;
 }
 @screen md {
-  .nav-item {
+  .nav--item {
     font-size: 16px;
+    margin-right: 30.6px;
+  }
+}
+
+.footer-content {
+  margin-top: 42px;
+}
+@screen md {
+  .footer-content {
+    margin-top: 69px;
   }
 }
 
@@ -148,8 +170,14 @@ footer {
   line-height: 24px;
   letter-spacing: 0;
 
-  margin-top: 40px;
+  margin-top: 60px;
 }
+@screen md {
+  .footer--info {
+    font-size: 16px;
+  }
+}
+
 .footer--info-item {
   @apply inline-block;
 
@@ -182,6 +210,7 @@ footer {
   .footer--copyright {
     @apply block;
 
+    font-size: 16px;
     margin-top: 51px;
   }
 }

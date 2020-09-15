@@ -2,10 +2,8 @@
   <div class="hero">
     <vue-container>
       <div class="hero-container">
-        <h1 class="hero--title">데이터를 돈처럼 쓰세요.</h1>
-        <p class="hero--desc">
-          데이터로 무엇이든 거래할 수 있는 세상을 만듭니다.
-        </p>
+        <h1 class="hero--title">{{ $t('hero.title') }}</h1>
+        <p class="hero--desc">{{ $t('hero.desc') }}</p>
       </div>
     </vue-container>
   </div>
@@ -16,6 +14,12 @@
   @apply bg-hero bg-cover bg-no-repeat text-white;
 
   height: 276px;
+}
+@screen md {
+  .hero {
+    /* height: 658px; */
+    height: unset;
+  }
 }
 
 .hero-container {
@@ -31,7 +35,7 @@
 
 .hero--title {
   font-size: 22px;
-  line-height: 28px;
+  /* line-height: 28px; */
 
   font-weight: 500;
 }
@@ -43,13 +47,15 @@
 
 .hero--desc {
   font-size: 14px;
-  line-height: 24px;
+  /* line-height: 24px; */
   margin-top: 6px;
 
   max-width: 185px;
 }
 @screen md {
   .hero--desc {
+    font-size: 22px;
+    max-width: 100%;
     margin-top: 27px;
   }
 }

@@ -1,6 +1,6 @@
 module.exports = {
   telemetry: false,
-  mode: 'universal',
+  // mode: 'universal',
   target: 'server',
   env: process.env,
   server: {
@@ -33,13 +33,14 @@ module.exports = {
     ]
   },
   buildModules: ['@nuxtjs/tailwindcss'],
-  modules: ['@nuxtjs/axios', '@nuxtjs/sitemap', 'nuxt-i18n'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/sitemap'],
   plugins: [
     { src: '~/plugins/axios' },
     { src: '~/plugins/logger' },
     { src: '~/plugins/cheerio' },
     { src: '~/plugins/vue-gtag' },
-    { src: '~/plugins/vue-moment' }
+    { src: '~/plugins/vue-moment' },
+    { src: '~/plugins/vue-i18n' }
   ],
   components: [
     { path: '~/components/atoms', prefix: 'vue' },
@@ -47,16 +48,12 @@ module.exports = {
     { path: '~/components/organisms', prefix: 'vue' },
     { path: '~/components/templates', prefix: 'vue' }
   ],
-  i18n: {
-    baseUrl: process.env.PUBLIC_URL,
-    defaultLocale: 'en',
-    locales: [
-      { code: 'en', iso: 'en-US', file: 'en.js' },
-      { code: 'ko', iso: 'ko', file: 'ko.js' }
-    ],
-    langDir: '~/locales',
-    seo: true
-  },
+  // i18n: {
+  //   defaultLocale: 'en',
+  //   locales: ['en', 'ko'],
+  //   vueI18nLoader: true
+  //   // seo: true
+  // },
   sitemap: {
     hostname: process.env.PUBLIC_URL,
     // defaults: {
