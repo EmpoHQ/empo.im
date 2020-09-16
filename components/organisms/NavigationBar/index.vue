@@ -5,20 +5,24 @@
         <a href="/"><vue-logo class="nav--logo" /></a>
 
         <!-- Desktop menus -->
-        <ul class="hidden md:flex align-middle space-x-24">
+        <ul class="hidden md:flex align-middle items-center space-x-20">
           <li v-for="item in NavigationItems" :key="item.title">
             <a :href="item.href" :target="item.target" class="nav--item">{{
               item.title
             }}</a>
           </li>
+          <vue-translate />
         </ul>
 
         <!-- Mobile menu icon -->
-        <vue-image
-          :src="require('~/assets/svgs/btn_menu.svg')"
-          class="nav--menu-icon"
-          @click="isOpen = !isOpen"
-        />
+        <div class="flex md:hidden items-center space-x-4">
+          <vue-translate />
+          <vue-image
+            :src="require('~/assets/svgs/btn_menu.svg')"
+            class="nav--menu-icon"
+            @click="isOpen = !isOpen"
+          />
+        </div>
       </div>
     </vue-container>
 
@@ -123,11 +127,6 @@ export default {
 
   padding-top: 18px;
   padding-bottom: 20px;
-}
-@screen md {
-  .nav--menu-icon {
-    @apply hidden;
-  }
 }
 
 .slide {
