@@ -2,7 +2,7 @@
   <div class="empoapp">
     <vue-section-title>
       <vue-image
-        :src="require('~/assets/svgs/group_27.svg')"
+        :src="require('~/assets/svgs/img_review_logo_empoapp.svg')"
         class="empoapp__logo"
       />
     </vue-section-title>
