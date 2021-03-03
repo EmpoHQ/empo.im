@@ -46,7 +46,6 @@ module.exports = {
     { path: '~/components/atoms', prefix: 'vue' },
     { path: '~/components/molecules', prefix: 'vue' },
     { path: '~/components/organisms', prefix: 'vue' },
-    { path: '~/components/templates', prefix: 'vue' }
   ],
   // i18n: {
   //   defaultLocale: 'en',

@@ -6,7 +6,7 @@
 
     <vue-empoapp />
 
-    <vue-kpi />
+    <vue-k-p-i />
 
     <vue-datascanner />
 
@@ -16,6 +16,6 @@
 
     <vue-brand-story />
 
-    <vue-bi />
+    <vue-b-i />
   </div>
 </template>
