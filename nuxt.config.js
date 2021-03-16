@@ -42,6 +42,9 @@ module.exports = {
     { path: '~/components/molecules', prefix: 'vue' },
     { path: '~/components/organisms', prefix: 'vue' },
   ],
+  generate: {
+    routes: ['/', '/terms', '/privacy']
+  },
   tailwindcss: {
     jit: true
   },
@@ -53,6 +56,5 @@ module.exports = {
   // },
   sitemap: {
     hostname: process.env.PUBLIC_URL,
-    gzip: true
   }
 }
