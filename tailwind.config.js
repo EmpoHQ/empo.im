@@ -34,9 +34,9 @@ module.exports = {
       },
       backgroundImage: {
         hero: "url('~/assets/imgs/img_mockup_hero.png')",
-        'brand-story': "url('~/assets/imgs/dsc_8869.png')"
+        brandStory: "url('~/assets/imgs/dsc_8869.png')"
       }
     }
   },
-  // plugins: [require('@tailwindcss/forms')]
+  plugins: [require('@tailwindcss/forms')]
 }
