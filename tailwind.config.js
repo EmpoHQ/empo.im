@@ -1,20 +1,18 @@
-// tailwind.config.js
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true
-  },
   important: true,
+  purge: {
+    content: [
+      'components/**/*.vue',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'plugins/**/*.js',
+      'nuxt.config.js'
+    ]
+  },
   theme: {
     extend: {
-      // screens: {
-      //   sm: '640px',
-      //   md: '768px',
-      //   lg: '1024px',
-      //   xl: '1100px'
-      // },
       colors: {
         primary: {
           100: '#d6cde3',
@@ -41,15 +39,5 @@ module.exports = {
       })
     }
   },
-  plugins: [require('@tailwindcss/ui')],
-  purge: {
-    enabled: process.env.NODE_ENV === 'production',
-    content: [
-      'components/**/*.vue',
-      'layouts/**/*.vue',
-      'pages/**/*.vue',
-      'plugins/**/*.js',
-      'nuxt.config.js'
-    ]
-  }
+  plugins: [require('@tailwindcss/forms')]
 }
