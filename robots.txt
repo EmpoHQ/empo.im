@@ -1,0 +1,3 @@
+Allow: *
+
+Sitemap: https://www.empo.im/sitemap.xml
