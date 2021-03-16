@@ -1,6 +1,10 @@
 module.exports = {
+  telemetry: false,
   target: 'static',
   env: process.env,
+  server: {
+    host: process.env.HOST
+  },
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -46,6 +50,7 @@ module.exports = {
     routes: ['/', '/terms', '/privacy']
   },
   tailwindcss: {
+    crawler: false,
     jit: true
   },
   // i18n: {
