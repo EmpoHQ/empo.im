@@ -11,7 +11,8 @@
 
 <style lang="postcss" scoped>
 .hero {
-  @apply bg-hero bg-cover bg-no-repeat text-white;
+  @apply bg-hero;
+  @apply bg-cover bg-no-repeat text-white;
 
   background-position: 80% 50%;
   height: 276px;

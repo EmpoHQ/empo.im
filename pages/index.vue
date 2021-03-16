@@ -1,5 +1,5 @@
 <template>
-  <div id="index--page">
+  <div>
     <vue-landing-hero />
 
     <vue-values />

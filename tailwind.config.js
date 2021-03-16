@@ -28,16 +28,15 @@ module.exports = {
       },
       fontFamily: {
         sans: [
-          'Apple SD Gothic Neo',
           '-apple-system',
           ...defaultTheme.fontFamily.sans
         ]
       },
-      backgroundImage: theme => ({
-        hero: "url('~assets/imgs/img_mockup_hero.png')",
-        'brand-story': "url('~assets/imgs/dsc_8869.png')"
-      })
+      backgroundImage: {
+        hero: "url('~/assets/imgs/img_mockup_hero.png')",
+        'brand-story': "url('~/assets/imgs/dsc_8869.png')"
+      }
     }
   },
-  plugins: [require('@tailwindcss/forms')]
+  // plugins: [require('@tailwindcss/forms')]
 }

@@ -41,7 +41,8 @@
 }
 
 .bs--content {
-  @apply bg-brand-story bg-cover bg-no-repeat text-center text-white;
+  @apply bg-brand-story;
+  @apply bg-cover bg-no-repeat text-center text-white;
 
   padding-top: 95px;
   padding-bottom: 95px;

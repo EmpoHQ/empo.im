@@ -5,3 +5,13 @@
     </vue-container>
   </div>
 </template>
+
+<script>
+export default {
+  head() {
+    return {
+      title: 'Privacy Policy'
+    }
+  }
+}
+</script>
