@@ -1,10 +1,9 @@
 module.exports = {
   telemetry: false,
-  // mode: 'universal',
-  target: 'server',
+  target: 'static',
   env: process.env,
   server: {
-    port: process.env.PORT
+    host: process.env.HOST
   },
   head: {
     title: process.env.npm_package_name || '',
@@ -46,8 +45,14 @@ module.exports = {
     { path: '~/components/atoms', prefix: 'vue' },
     { path: '~/components/molecules', prefix: 'vue' },
     { path: '~/components/organisms', prefix: 'vue' },
-    { path: '~/components/templates', prefix: 'vue' }
   ],
+  generate: {
+    routes: ['/', '/terms', '/privacy']
+  },
+  tailwindcss: {
+    crawler: false,
+    jit: true
+  },
   // i18n: {
   //   defaultLocale: 'en',
   //   locales: ['en', 'ko'],
@@ -56,12 +61,5 @@ module.exports = {
   // },
   sitemap: {
     hostname: process.env.PUBLIC_URL,
-    // defaults: {
-    //   changefreq: 'daily',
-    //   lastmod: new Date(),
-    //   lastmodrealtime: true
-    // },
-    gzip: true
-    // exclude: ['/search']
   }
 }

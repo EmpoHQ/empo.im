@@ -1,12 +1,12 @@
 <template>
-  <div id="index--page">
+  <div>
     <vue-landing-hero />
 
     <vue-values />
 
     <vue-empoapp />
 
-    <vue-kpi />
+    <vue-k-p-i />
 
     <vue-datascanner />
 
@@ -16,6 +16,6 @@
 
     <vue-brand-story />
 
-    <vue-bi />
+    <vue-b-i />
   </div>
 </template>

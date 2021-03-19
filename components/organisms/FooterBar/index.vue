@@ -35,23 +35,24 @@
           </li>
         </ul>
 
-        <ul v-if="$store.state.locales.locale === 'ko'" class="footer--info">
+        <ul class="footer--info">
           <li
             v-for="item in InfoItems(1)"
             :key="item.definition"
             class="footer--info-item"
           >
-            <span class="info--definition">{{ item.definition }}</span>
-            <span>:</span>
+            <span v-if="item.definition" class="info--definition"
+              >{{ item.definition }} :</span
+            >
             <span>{{ item.description }}</span>
           </li>
         </ul>
 
-        <ul v-if="$store.state.locales.locale === 'en'" class="footer--info">
+        <!-- <ul v-if="$store.state.locales.locale === 'en'" class="footer--info">
           <li v-for="item in InfoItems(1)" :key="item.definition">
             {{ item.description }}
           </li>
-        </ul>
+        </ul> -->
 
         <vue-copyright class="footer--copyright" />
       </div>
@@ -179,7 +180,7 @@ footer {
 }
 
 .footer--info-item {
-  @apply inline-block;
+  /* @apply inline-block; */
 
   margin-right: 14px;
 }
@@ -199,7 +200,6 @@ footer {
 
 .footer--copyright {
   @apply block;
-  @apply font-semibold;
 
   color: #979797;
   margin-top: 40px;
