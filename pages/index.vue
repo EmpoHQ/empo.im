@@ -12,6 +12,8 @@
 
     <vue-datascanner-plan />
 
+    <vue-mareel />
+
     <vue-reviews />
 
     <vue-brand-story />

@@ -2,7 +2,7 @@
   <nav class="relative">
     <vue-container>
       <div class="flex justify-between items-center">
-        <a href="/"><vue-logo class="nav--logo" /></a>
+        <a href="/"><vue-logo class="nav--logo"/></a>
 
         <!-- Desktop menus -->
         <ul class="hidden md:flex align-middle items-center space-x-20">
@@ -59,11 +59,6 @@ export default {
     NavigationItems() {
       return [
         {
-          title: 'values',
-          href: '/values',
-          target: '_self'
-        },
-        {
           title: 'empo app',
           href:
             'https://play.google.com/store/apps/details?id=com.empo.android.empoapp',
@@ -75,14 +70,9 @@ export default {
           target: '_blank'
         },
         {
-          title: 'story',
-          href: '/story',
-          target: '_self'
-        },
-        {
-          title: 'bi',
-          href: '/bi',
-          target: '_self'
+          title: 'mareel',
+          href: 'https://www.mareel.io',
+          target: '_blank'
         }
       ]
     }
