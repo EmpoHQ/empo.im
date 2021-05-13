@@ -25,7 +25,6 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "4.1.0",
-    "nodemon": "^2.0.7",
-    "postcss": "8.2.15"
+    "nodemon": "^2.0.7"
   }
 }
