@@ -1370,7 +1370,7 @@
   dependencies:
     mini-svg-data-uri "^1.2.3"
 
-"@tailwindcss/jit@^0.1.18":
+"@tailwindcss/jit@0.1.18", "@tailwindcss/jit@^0.1.18":
   version "0.1.18"
   resolved "https://registry.yarnpkg.com/@tailwindcss/jit/-/jit-0.1.18.tgz#f44ac25b347ad1b4056af4fbda69399070206825"
   integrity sha512-WNSEiwbggtO9n6+ok2fFdYmhqY20oqLmB82H23nY8P5WzijZbIshojoY3s/OvPD7cmvzkweZ6LLKGWuDS1/vLA==
@@ -4077,9 +4077,9 @@ forwarded@~0.1.2:
   integrity sha1-mMI9qxF1ZXuMBXPozszZGw/xjIQ=
 
 fraction.js@^4.0.13:
-  version "4.0.13"
-  resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.0.13.tgz#3c1c315fa16b35c85fffa95725a36fa729c69dfe"
-  integrity sha512-E1fz2Xs9ltlUp+qbiyx9wmt2n9dRzPsS11Jtdb8D2o+cC7wr9xkkKsVKJuBX0ST+LVS+LhLO+SbLJNtfWcJvXA==
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.1.0.tgz#229ec1cedc8c3c7e5d2d20688ba64f0a43af5830"
+  integrity sha512-o9lSKpK0TDqDwTL24Hxqi6I99s942l6TYkfl6WvGWgLOIFz/YonSGKfiSeMadoiNvTfqnfOa9mjb5SGVbBK9/w==
 
 fragment-cache@^0.2.1:
   version "0.2.1"
@@ -7331,15 +7331,6 @@ postcss-values-parser@^4.0.0:
     is-url-superb "^4.0.0"
     postcss "^7.0.5"
 
-postcss@8.2.15, postcss@^8.1.10, postcss@^8.1.6, postcss@^8.2.1, postcss@^8.2.10, postcss@^8.2.13:
-  version "8.2.15"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.2.15.tgz#9e66ccf07292817d226fc315cbbf9bc148fbca65"
-  integrity sha512-2zO3b26eJD/8rb106Qu2o7Qgg52ND5HPjcyQiK2B98O388h43A448LCslC0dI2P97wCAQRJsFvwTRcXxTKds+Q==
-  dependencies:
-    colorette "^1.2.2"
-    nanoid "^3.1.23"
-    source-map "^0.6.1"
-
 postcss@^6.0.9:
   version "6.0.23"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.23.tgz#61c82cc328ac60e677645f979054eb98bc0e3324"
@@ -7357,6 +7348,15 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2
     chalk "^2.4.2"
     source-map "^0.6.1"
     supports-color "^6.1.0"
+
+postcss@^8.1.10, postcss@^8.1.6, postcss@^8.2.1, postcss@^8.2.10, postcss@^8.2.13:
+  version "8.2.15"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.2.15.tgz#9e66ccf07292817d226fc315cbbf9bc148fbca65"
+  integrity sha512-2zO3b26eJD/8rb106Qu2o7Qgg52ND5HPjcyQiK2B98O388h43A448LCslC0dI2P97wCAQRJsFvwTRcXxTKds+Q==
+  dependencies:
+    colorette "^1.2.2"
+    nanoid "^3.1.23"
+    source-map "^0.6.1"
 
 prepend-http@^1.0.0:
   version "1.0.4"
