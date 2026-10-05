@@ -914,6 +914,36 @@
   dependencies:
     purgecss "^4.0.3"
 
+"@intlify/core-base@11.4.13":
+  version "11.4.13"
+  resolved "https://registry.yarnpkg.com/@intlify/core-base/-/core-base-11.4.13.tgz#6db0f3e1488b30cfceab7175bb1e2e22efe07a5d"
+  integrity sha512-3qGv1/j0fl6ZSeehGaznE78A4i3hCaOeOyDh7jq7SV6ch/XGoy96xIrYuALTV3xhIqj2rktsIKcwlLZ3CbOhkA==
+  dependencies:
+    "@intlify/devtools-types" "11.4.13"
+    "@intlify/message-compiler" "11.4.13"
+    "@intlify/shared" "11.4.13"
+
+"@intlify/devtools-types@11.4.13":
+  version "11.4.13"
+  resolved "https://registry.yarnpkg.com/@intlify/devtools-types/-/devtools-types-11.4.13.tgz#49fe57f2c8e967fc1094a93ac5751ec460334a86"
+  integrity sha512-f38d2yvjNc1/c+BnTLsxTB0729clTtyy7kTxHu4FFlvI6FpmBOp7b9sLYtsKJpXSZ70kIEexvNwDSzLkIlYnlQ==
+  dependencies:
+    "@intlify/core-base" "11.4.13"
+    "@intlify/shared" "11.4.13"
+
+"@intlify/message-compiler@11.4.13":
+  version "11.4.13"
+  resolved "https://registry.yarnpkg.com/@intlify/message-compiler/-/message-compiler-11.4.13.tgz#70bfe20b5c1ed90b60128f155cee33ba7ca1c2d8"
+  integrity sha512-cjKsDeWUD/i3mj0QtC8hydLCFP5mgZtTU1xZZaN9/O3FG94EXc0rTbecYpifglp26rpoJoIjSlW137VejLKsZw==
+  dependencies:
+    "@intlify/shared" "11.4.13"
+    source-map-js "^1.0.2"
+
+"@intlify/shared@11.4.13":
+  version "11.4.13"
+  resolved "https://registry.yarnpkg.com/@intlify/shared/-/shared-11.4.13.tgz#b803a658d2320c116fb1409ebd63d9775ae2280b"
+  integrity sha512-ZjcNgEED1FtTCFb+ohWBdR21k5kvleKtM9peobQtLB83mNIfEhJK86dEbhfk+OcUrybrEbc4eDeE9UbFUVHsjQ==
+
 "@koa/router@^9.0.1":
   version "9.4.0"
   resolved "https://registry.yarnpkg.com/@koa/router/-/router-9.4.0.tgz#734b64c0ae566eb5af752df71e4143edc4748e48"
@@ -1566,6 +1596,11 @@
     vue-template-es2015-compiler "^1.9.0"
   optionalDependencies:
     prettier "^1.18.2"
+
+"@vue/devtools-api@^6.5.0":
+  version "6.6.4"
+  resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.6.4.tgz#cbe97fe0162b365edc1dba80e173f90492535343"
+  integrity sha512-sGhTPMuXqZ1rVOk32RylztWkfXTRhuS7vgAKv0zjqk8gbsHkJ7xfFf+jbySxt7tWObEJwyKaHMikV/WGDiQm8g==
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
@@ -8496,6 +8531,11 @@ source-map-js@^0.6.2:
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-0.6.2.tgz#0bb5de631b41cfbda6cfba8bd05a80efdfd2385e"
   integrity sha512-/3GptzWzu0+0MBQFrDKzw/DvvMTUORvgY6k6jd/VS6iCR4RDTKWH6v6WPwQoUO8667uQEf9Oe38DxAYWY5F/Ug==
 
+source-map-js@^1.0.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.2.2.tgz#79fb88d97535a21cb27162cb05d211b67acea4ab"
+  integrity sha512-KGj/8Y43x35aZVDtt+J4mK1hoLGHULMYfSkODJNQjNDC3oW1PqPoxMwo0pLUsWM/UEGzON/NxeHywEfNXNP3Vw==
+
 source-map-resolve@^0.5.0:
   version "0.5.3"
   resolved "https://registry.yarnpkg.com/source-map-resolve/-/source-map-resolve-0.5.3.tgz#190866bece7553e1f8f267a2ee82c606b5509a1a"
@@ -9401,20 +9441,25 @@ vue-client-only@^2.0.0:
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.0.0.tgz#ddad8d675ee02c761a14229f0e440e219de1da1c"
   integrity sha512-arhk1wtWAfLsJyxGMoEYhoBowM87/i6HLSG2LH/03Yog6i2d9JEN1peMP0Ceis+/n9DxdenGYZZTxbPPJyHciA==
 
-vue-gtag@^1.11.0:
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/vue-gtag/-/vue-gtag-1.16.1.tgz#edb2f20ab4f6c4d4d372dfecf8c1fcc8ab890181"
-  integrity sha512-5vs0pSGxdqrfXqN1Qwt0ZFXG0iTYjRMu/saddc7QIC5yp+DKgjWQRpGYVa7Pq+KbThxwzzMfo0sGi7ISa6NowA==
+vue-gtag@^3.0.0:
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/vue-gtag/-/vue-gtag-3.7.1.tgz#ab1edbc676a700027933a045013e3122d70ad029"
+  integrity sha512-V4S+ks1p/VdfTrxZrgrAjwdcBp3rGjuR4Ts/9KmNOeGlcATOsLZRjIxkrIDWW6oHy7HM4zcviYDEb2QOR9+AKQ==
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
   integrity sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog==
 
-vue-i18n@^8.24.1:
-  version "8.24.4"
-  resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-8.24.4.tgz#b158614c1df7db183d9cadddbb73e1d540269492"
-  integrity sha512-RZE94WUAGxEiBAANxQ0pptbRwDkNKNSXl3fnJslpFOxVMF6UkUtMDSuYGuW2blDrVgweIXVpethOVkYoNNT9xw==
+vue-i18n@^11.0.0:
+  version "11.4.13"
+  resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-11.4.13.tgz#97ee42c5780b7cc1d3f3e60e3164a1ceb918967a"
+  integrity sha512-2G7LC9XcdZ0IljFib7lKGHNiBBOTv6HO+2bnBaOiQgDYZ+uUnqSpuED5DbBo1t7su50o/WRGn+ZfDQTGd26xEw==
+  dependencies:
+    "@intlify/core-base" "11.4.13"
+    "@intlify/devtools-types" "11.4.13"
+    "@intlify/shared" "11.4.13"
+    "@vue/devtools-api" "^6.5.0"
 
 vue-loader@^15.9.7:
   version "15.9.7"
